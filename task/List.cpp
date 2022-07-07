@@ -18,12 +18,10 @@ List::List(const List& obj)
 
 	const Element* temp = obj.m_head;
 
-	char* arr = new char[obj.m_count];
 	int i{ 0 };
 	while (temp != nullptr)
 	{
-		arr[i] = temp->data;
-		InsertByPosition(arr[i], i);
+		InsertByPosition(temp->data, i);
 		i++;
 		temp = temp->next;
 	}
